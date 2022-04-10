@@ -1,0 +1,58 @@
+.mainContainer {
+  height: auto;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: bold;
+}
+  
+.normalText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: arial;
+  font-size: 12px;
+}
+  
+.button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: blue;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  color: white;
+  font-family: arial;
+  font-size: 12px;
+}
+  
+.alertText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+}
+
+.captchaImageColumn {
+  display: grid;
+  grid-template-columns: 125px 125px 125px;
+  grid-gap: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.captchaImageCell {
+  background-color: grey;
+  border: black
+}

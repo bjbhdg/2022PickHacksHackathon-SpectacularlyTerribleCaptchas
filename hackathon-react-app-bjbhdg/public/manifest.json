@@ -8,8 +8,8 @@
     "default_popup": "index.html",
     "default_title": "Spectacularly Terrible Captchas",
     "default_icon": {
-      "48": "icons/48icon.png",
-      "96": "icons/96icon.png"
+      "16": "icons/16icon.png",
+      "32": "icons/32icon.png"
     }
   },
   "icons": {
