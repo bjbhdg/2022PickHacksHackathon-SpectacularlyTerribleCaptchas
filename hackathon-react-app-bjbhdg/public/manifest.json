@@ -1,7 +1,7 @@
 {
   "name": "Spectacularly Terrible Captchas",
-  "description": "A browser extension that randomly pops up intentionally bad 'captcha-like' tasks.",
-  "version": "0.1",
+  "description": "A browser extension that tasks players with intentionally-bad designed tasks.",
+  "version": "1.0",
   "manifest_version": 2,
   "homepage_url": "https://github.com/bjbhdg/2022PickHacksHackathon-SpectacularlyTerribleCaptchas",
   "browser_action": {

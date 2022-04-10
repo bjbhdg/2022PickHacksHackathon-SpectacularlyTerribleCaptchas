@@ -25,7 +25,7 @@
 .button {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: blue;
+  background-color: cornflowerblue;
   text-align: center;
   margin: auto;
   display: flex;
@@ -46,13 +46,14 @@
 
 .captchaImageColumn {
   display: grid;
-  grid-template-columns: 125px 125px 125px;
+  grid-template-columns: 145px 145px 145px;
   grid-gap: 10px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
 
 .captchaImageCell {
-  background-color: grey;
-  border: black
+  background-color: white;
+  border: black 1px;
+  border-style: solid;
 }
