@@ -1,3 +1,5 @@
+/* Used in ALL .tsx files: */
+/* =========================== */
 .mainContainer {
   height: auto;
   width: auto;
@@ -21,7 +23,10 @@
   font-family: arial;
   font-size: 12px;
 }
-  
+/* =========================== */
+
+/* CSS Element Specifically for App.tsx */
+/* =========================== */  
 .button {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -33,7 +38,10 @@
   font-family: arial;
   font-size: 12px;
 }
+/* =========================== */
   
+/* alertText is used for all pages in './pages' */
+/* =========================== */
 .alertText {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -43,7 +51,10 @@
   font-weight: bold;
   color: red;
 }
+/* =========================== */
 
+/* CSS Elements specifically for CaptchaPage.tsx */
+/* =========================== */
 .captchaImageColumn {
   display: grid;
   grid-template-columns: 145px 145px 145px;
@@ -57,3 +68,4 @@
   border: black 1px;
   border-style: solid;
 }
+/* =========================== */
