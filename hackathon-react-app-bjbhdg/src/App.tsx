@@ -3,6 +3,7 @@ import CSS from 'csstype'
 import PhonePage from './pages/PhonePage'
 import CaptchaPage from './pages/CaptchaPage'
 import WelcomePage from './pages/WelcomePage'
+import NotRobotPage from './pages/NotRobotPage'
 
 const pageChangeButton: CSS.Properties = {
   marginTop: "10px",
@@ -22,6 +23,7 @@ interface IState {
   welcomeOpen: boolean
   inputPhoneOpen: boolean
   captchaOpen: boolean
+  notRobotOpen: boolean
 }
 
 class App extends React.Component<IProps, IState>{
@@ -30,7 +32,8 @@ class App extends React.Component<IProps, IState>{
     this.state = {
       welcomeOpen: true,
       inputPhoneOpen: false,
-      captchaOpen: false
+      captchaOpen: false,
+      notRobotOpen: false
     }
   }
 
@@ -41,8 +44,19 @@ class App extends React.Component<IProps, IState>{
       this.setState({welcomeOpen: false})
     }
 
+    switch(Math.floor(Math.random() * 3)) {
+      case 0:
+        this.setState({ inputPhoneOpen: true, captchaOpen: false, notRobotOpen: false })
+        break
+      case 1:
+        this.setState({ inputPhoneOpen: false, captchaOpen: true, notRobotOpen: false })
+        break
+      case 2:
+        this.setState({ inputPhoneOpen: false, captchaOpen: false, notRobotOpen: true })
+    }
+
     // If neither of the two other pages are open, then randomly open one.
-    if(!this.state.inputPhoneOpen && !this.state.captchaOpen) {
+    /*if(!this.state.inputPhoneOpen && !this.state.captchaOpen) {
       switch(Math.floor(Math.random() * 2)) {
         case 0:
           this.setState({ inputPhoneOpen: true, captchaOpen: false })
@@ -56,7 +70,7 @@ class App extends React.Component<IProps, IState>{
     // If the captcha page is open, then swap to the phone page.
     } else if(this.state.captchaOpen) {
       this.setState({ inputPhoneOpen: true, captchaOpen: false })
-    }
+    }*/
   }
 
   render(): JSX.Element {
@@ -65,6 +79,7 @@ class App extends React.Component<IProps, IState>{
         {this.state.welcomeOpen ? <WelcomePage /> : null}
         {this.state.inputPhoneOpen ? <PhonePage /> : null}
         {this.state.captchaOpen ? <CaptchaPage /> : null}
+        {this.state.notRobotOpen ? <NotRobotPage /> : null}
         <button style={pageChangeButton} type="button" id="Page Navigation Button"
           onClick={() => this.handlePageChange()}
         >

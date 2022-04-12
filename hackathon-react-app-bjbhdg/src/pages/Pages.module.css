@@ -28,8 +28,9 @@
 /* alertText is used for all pages in './pages' */
 /* =========================== */
 .alertText {
-  margin-top: 10px;
   margin-bottom: 10px;
+  min-height: 12px;
+  max-height: 24px;
   text-align: center;
   font-family: arial;
   font-size: 12px;

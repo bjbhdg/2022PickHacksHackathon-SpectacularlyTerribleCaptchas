@@ -168,8 +168,8 @@ class CaptchaPage extends React.Component <IProps, IState> {
             Reset
           </button>
           {/* The captcha page is reset, along with allowing alerts to be displayed.*/}
-          <button type="button" style={{ marginLeft: "5px", marginBottom: "10px" }} onClick={
-              () => this.setState({ allowPopUps: true })}
+          <button type="button" style={{ marginLeft: "5px", marginBottom: "10px" }}
+            onClick={() => this.setState({ allowPopUps: true })}
           >
             Submit
           </button>
