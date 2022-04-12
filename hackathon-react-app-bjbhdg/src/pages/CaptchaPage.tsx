@@ -86,34 +86,35 @@ class CaptchaPage extends React.Component <IProps, IState> {
         fileDir = "./pics/IMG_20211122_205738-1.jpg"
         break
       case 12:
-        fileDir = "./pics/Resized_20211031_0131221.jpeg"
+        fileDir = "./pics/Resized_20211031_0131221.jpg"
         break
       case 13:
-        fileDir = "./pics/Resized_20211031_135824.jpeg"
+        fileDir = "./pics/Resized_20211031_135824.jpg"
         break
       case 14:
-        fileDir = "./pics/Resized_20220306_163016.jpeg"
+        fileDir = "./pics/Resized_20220306_163016.jpg"
         break
       case 15:
-        fileDir = "./pics/Resized_20220219_1952291.jpeg"
+        fileDir = "./pics/Resized_20220219_1952291.jpg"
         break
       case 16:
-        fileDir = "./pics/Resized_20220204_2129581.jpeg"
+        fileDir = "./pics/Resized_20220204_2129581.jpg"
         break
       case 17:
-        fileDir = "./pics/Resized_20211207_1504381.jpeg"
+        fileDir = "./pics/Resized_20211207_1504381.jpg"
         break
       case 18:
-        fileDir = "./pics/Resized_20210429_14393111.jpeg"
+        fileDir = "./pics/Resized_20210429_14393111.jpg"
         break
       case 19:
-        fileDir = "./pics/Resized_20211212_125918.jpeg"
+        fileDir = "./pics/Resized_20211212_125918.jpg"
     }
 
-    // A JSX Element is returned of the image chosen above, then size of the image is forcibly
-    // made to be 125px by 125px, so some pictures will have HEAVY stretch.
+    // A JSX Element is returned of the image chosen above, the imagge dimensions were forcibly
+    // brought down to 120px by 120px, so prepare for some heavy stretching (for the laughs
+    // of course).
     return(
-      <img src={fileDir} alt={fileDir} width="120px" height="120px"/>
+      <img src={fileDir} alt={fileDir}/>
     )
   }
 

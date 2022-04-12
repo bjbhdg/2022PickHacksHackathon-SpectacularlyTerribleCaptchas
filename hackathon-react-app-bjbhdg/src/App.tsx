@@ -68,7 +68,7 @@ class App extends React.Component<IProps, IState>{
         <button style={pageChangeButton} type="button" id="Page Navigation Button"
           onClick={() => this.handlePageChange()}
         >
-          {this.state.welcomeOpen ? "Click Here" : "Other"}
+          {this.state.welcomeOpen ? "Click Here" : "Change Page"}
         </button>
       </div>
     )
