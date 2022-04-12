@@ -1,4 +1,4 @@
-/* Used in ALL .tsx files: */
+/* Used in ALL .tsx files in "./pages": */
 /* =========================== */
 .mainContainer {
   height: auto;
@@ -25,21 +25,6 @@
 }
 /* =========================== */
 
-/* CSS Element Specifically for App.tsx */
-/* =========================== */  
-.button {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: cornflowerblue;
-  text-align: center;
-  margin: auto;
-  display: flex;
-  color: white;
-  font-family: arial;
-  font-size: 12px;
-}
-/* =========================== */
-  
 /* alertText is used for all pages in './pages' */
 /* =========================== */
 .alertText {

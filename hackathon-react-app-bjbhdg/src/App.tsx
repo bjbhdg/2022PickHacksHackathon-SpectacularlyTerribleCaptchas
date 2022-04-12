@@ -1,8 +1,20 @@
 import React from 'react'
-import styles from './pages/Pages.module.css' // CSS styles located here.
+import CSS from 'csstype'
 import PhonePage from './pages/PhonePage'
 import CaptchaPage from './pages/CaptchaPage'
 import WelcomePage from './pages/WelcomePage'
+
+const pageChangeButton: CSS.Properties = {
+  marginTop: "10px",
+  marginBottom: "10px",
+  backgroundColor: "cornflowerblue",
+  textAlign: "center",
+  margin: "auto",
+  display: "flex",
+  color: "white",
+  fontFamily: "arial",
+  fontSize: "12px"
+}
 
 interface IProps {}
 
@@ -53,7 +65,7 @@ class App extends React.Component<IProps, IState>{
         {this.state.welcomeOpen ? <WelcomePage /> : null}
         {this.state.inputPhoneOpen ? <PhonePage /> : null}
         {this.state.captchaOpen ? <CaptchaPage /> : null}
-        <button className={styles.button} type="button" id="Page Navigation Button"
+        <button style={pageChangeButton} type="button" id="Page Navigation Button"
           onClick={() => this.handlePageChange()}
         >
           {this.state.welcomeOpen ? "Click Here" : "Other"}
