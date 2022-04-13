@@ -29,6 +29,7 @@
 /* =========================== */
 .alertText {
   margin-bottom: 10px;
+  min-width: 500px;
   min-height: 12px;
   max-height: 24px;
   text-align: center;

@@ -18,7 +18,7 @@ class CaptchaPage extends React.Component <IProps, IState> {
   // Whenever the user attempts to submit their input, an alert is displayed on top of
   // the page.
   captchaPopUpMessage(): string {
-    const captchaPopUpList = [
+    const captchaPopUpList: string[] = [
       "Aren't cats just the greatest?",
       "Dogs are pretty cool, right?",
       "Cats are better, change my mind.",

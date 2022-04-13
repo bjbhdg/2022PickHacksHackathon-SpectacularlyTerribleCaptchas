@@ -12,18 +12,18 @@ interface IState {
 
 function outputPhoneFormat(phoneNum: number): string {
   // Cuts off the trailing seven numbers in the phone number (*xxx*) xxx-xxxx.
-  const firstThreeDigits = Math.floor(phoneNum / 10000000)
+  const firstThreeDigits: number = Math.floor(phoneNum / 10000000)
   
   // Retrieves these (surrounded by '*') numbers in a phone number (xxx) *xxx*-xxxx
-  const nextThreeDigits = Math.floor((phoneNum - (firstThreeDigits * 10000000)) / 10000)
+  const nextThreeDigits: number = Math.floor((phoneNum - (firstThreeDigits * 10000000)) / 10000)
   
   // Retrieves these (surrounded by '*') three digits: (xxx) xxx-*xxx*x
-  const nearlyLastThreeDigits = Math.floor((phoneNum - 
+  const nearlyLastThreeDigits: number = Math.floor((phoneNum - 
     (firstThreeDigits * 10000000 + nextThreeDigits * 10000)) / 10)
   
   // Last digit of the phone number is retrieved, this is done because .toLocaleString()
   // below will forcibly place a comma in a number of greater than 3 digits.
-  const lastDigit = phoneNum % 10
+  const lastDigit: number = phoneNum % 10
   
   // Formats the number as follows:
   // (firstThreeDigits) nextThreeDigits-nearlyLastThreeDigitslastDigit [(xxx) xxx-xxxx]
@@ -45,8 +45,8 @@ class PhonePage extends React.Component<IProps, IState> {
   }
 
   authenticateASCII(userEnteredASCII: number): number {
-    const MIN_ASCII = 33
-    const MAX_ASCII = 126
+    const MIN_ASCII: number = 33
+    const MAX_ASCII: number = 126
 
     if(userEnteredASCII < MIN_ASCII) {
       userEnteredASCII = MAX_ASCII
@@ -74,7 +74,7 @@ class PhonePage extends React.Component<IProps, IState> {
   }
 
   phonePopUpMessage(): string {
-    const phonePopUps = [
+    const phonePopUps: string[] = [
       "Your e-mail seems to be incorrect, try again.",
       "We're sorry, but your e-mail already has an account associated with it.",
       "Try entering your phone number again (it should be simple!).",
@@ -118,7 +118,8 @@ class PhonePage extends React.Component<IProps, IState> {
               * on top of the page will be hidden (if previously visible).*/}
             <input id="User Email Output" type="email" readOnly={true}
               value={this.state.userEnteredEmail} size={64}
-              onClick={() => {this.setState({ allowPopUps: false })}}
+                style={{ marginBottom: "10px" }}
+                  onClick={() => {this.setState({ allowPopUps: false })}}
             />
             <br/>
             {/* The user must use the following buttons to input their email. */}

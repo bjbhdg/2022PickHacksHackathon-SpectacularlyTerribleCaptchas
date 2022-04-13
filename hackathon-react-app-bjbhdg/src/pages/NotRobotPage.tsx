@@ -13,12 +13,12 @@ class NotRobotPage extends React.Component <IProps, IState> {
       this.state = {
         // -3 is the default value so that the user must click the checkbox three times
         // in order for a pop up to be shown.
-        checkBoxClickCount: -3
+        checkBoxClickCount: -2
       }
   }
 
   notRobotPopUpMessage(): string {
-      const robotPopUpList = [
+      const robotPopUpList: string[] = [
         "Uh... are you okay?",
         "You've been here for a while now...",
         "Don't worry, I trust that you're not a robot.",
@@ -44,7 +44,7 @@ class NotRobotPage extends React.Component <IProps, IState> {
         </header>
         {/* For every three clicks of the checkbox, a pop up is shown.*/} 
         <div id="Not a Robot Pop Up Space" className={styles.alertText}>
-          {(this.state.checkBoxClickCount % 4) ? null : this.notRobotPopUpMessage()}
+          {(this.state.checkBoxClickCount % 3) ? null : this.notRobotPopUpMessage()}
         </div>
         <div id="Futile Human Prover" style={{ textAlign: "center", marginBottom: "10px" }}>
           <input id="Uncheckable Box" onClick={() => this.setState({
